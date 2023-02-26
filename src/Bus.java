@@ -47,4 +47,18 @@ public abstract class Bus extends Transport implements Competitor{
     }
 
     public abstract void openDoor();
+
+    public enum CapacityType {
+        EXTRA_SMALL("Up to 10 seats"),
+        SMALL("Up to 25 seats"),
+        MEDIUM("25-50 seats"),
+        LARGE("50-80 seats"),
+        ESPECIALLY_LARGE("80-120 seats");
+
+        private final String description;
+
+        CapacityType(String description) {
+            this.description = description;
+        }
+    }
 }

@@ -78,4 +78,15 @@ public abstract class Transport<D extends Driver<C>, C> implements Competitor {
     }
 
     public abstract void race();
+    protected Type type;
+
+    public Transport(Type type) {
+        this.type = type;
+    }
+
+    public abstract void printType();
+
+    protected String getTypeString() {
+        return type != null ? type.toString() : "Insufficient vehicle data";
+    }
 }

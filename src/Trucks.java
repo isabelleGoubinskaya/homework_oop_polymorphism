@@ -44,4 +44,26 @@ public abstract class Trucks extends Transport implements Competitor{
     public void stop() {
         System.out.println("Truck is stopping");
     }
+
+    public enum PayloadType {
+        N1("Up to 3.5 tons"),
+        N2("Over 3.5 to 12 tons"),
+        N3("Over 12 tons");
+
+        private String payloadDescription;
+
+        PayloadType(String payloadDescription) {
+            this.payloadDescription = payloadDescription;
+        }
+
+        public String getPayloadDescription() {
+            return payloadDescription;
+        }
+
+        @Override
+        public String toString() {
+            return payloadDescription;
+        }
+    }
+
 }

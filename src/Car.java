@@ -55,4 +55,31 @@ public class Car<D extends CarDriver> {
         this.tireType = tireType;
     }
 
+    public enum CarBodyType {
+        SEDAN("Sedan"),
+        HATCHBACK("Hatchback"),
+        COUPE("Coupe"),
+        UNIVERSAL("Universal"),
+        SUV("SUV"),
+        CROSSOVER("Crossover"),
+        PICKUP("Pickup"),
+        VAN("Van"),
+        MINIVAN("Minivan");
+
+        private String description;
+
+        CarBodyType(String description) {
+            this.description = description;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        @Override
+        public String toString() {
+            return "Body type: " + this.name() + ", Description: " + description;
+        }
+    }
+
 }
